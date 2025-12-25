@@ -20,7 +20,7 @@ def main(out_dir: str = "out"):
     out.mkdir(parents=True, exist_ok=True)
 
     data = {
-        "generated_at": datetime.utcnow().isoformat() + "Z",
+        "generated_at": datetime.now(timezone.utc).isoformat(),
         "metrics": [
             {"name": "total_tests", "value": 128},
             {"name": "passed", "value": 124},
